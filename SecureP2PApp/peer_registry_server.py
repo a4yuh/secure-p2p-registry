@@ -27,5 +27,6 @@ def resolve(peer_code):
     return jsonify({"error": "Not found"}), 404
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5001))  # Use Render's port if available
+    port = int(os.environ.get("PORT", 5001))
+    print("✅ DEBUG: Binding to 0.0.0.0 on port", port)
     app.run(host="0.0.0.0", port=port)
