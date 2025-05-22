@@ -8,8 +8,6 @@ CORS(app)
 # In-memory peer registry: peer_code -> IP
 peer_registry = {}
 
-print("✅ Flask is running the CORRECT app.py file")
-
 @app.route("/register", methods=["POST"])
 def register():
     data = request.get_json()
@@ -32,6 +30,6 @@ def resolve(peer_code):
     return jsonify({"error": "Not found"}), 404
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5001))  # Render sets $PORT
+    port = int(os.environ.get("PORT", 5001))  # Render sets this
     print(f"✅ DEBUG: Binding to 0.0.0.0 on port {port}")
     app.run(host="0.0.0.0", port=port)
