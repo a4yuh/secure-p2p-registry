@@ -3,7 +3,7 @@
 import requests
 
 # Replace with your hosted server address (e.g., localhost or public IP)
-REGISTRY_URL = "https://securep2p-registry.onrender.com"
+REGISTRY_URL = "https://secure-p2p-registry.onrender.com"
 
 def register_peer(peer_code, ip):
     print(f"🔁 Attempting to register {peer_code} → {ip}")
