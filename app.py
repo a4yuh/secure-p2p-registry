@@ -32,4 +32,8 @@ def resolve(peer_code):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))  # Render sets this
     print(f"✅ DEBUG: Binding to 0.0.0.0 on port {port}")
+    print("📋 Active routes:")
+    for rule in app.url_map.iter_rules():
+        print(f"➡️ {rule} → {rule.methods}")
+
     app.run(host="0.0.0.0", port=port)
